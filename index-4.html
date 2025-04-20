@@ -1,0 +1,170 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   CuberCore Studios - Galaxy GO
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+  <script>
+   function toggleInfo() {
+     const infoSection = document.getElementById('infoSection');
+     if (infoSection.classList.contains('hidden')) {
+       infoSection.classList.remove('hidden');
+       infoSection.classList.add('block');
+     } else {
+       infoSection.classList.remove('block');
+       infoSection.classList.add('hidden');
+     }
+   }
+   function toggleModsGUI() {
+     const modsGUI = document.getElementById('modsGUI');
+     if (modsGUI.classList.contains('hidden')) {
+       modsGUI.classList.remove('hidden');
+       modsGUI.classList.add('flex');
+       document.body.style.overflow = 'hidden';
+     } else {
+       modsGUI.classList.remove('flex');
+       modsGUI.classList.add('hidden');
+       document.body.style.overflow = 'auto';
+     }
+   }
+  </script>
+ </head>
+ <body class="bg-[#0a0a0a] min-h-screen flex flex-col items-center justify-start relative overflow-x-hidden">
+  <!-- Top bar -->
+  <header class="w-full flex items-center justify-center relative bg-[#0a0a0a] py-3 border-b border-[#2c2c2c]">
+   <div class="flex items-center space-x-3 text-[#b9a98f] text-base select-none">
+    <i class="fas fa-shield-alt text-[#3a6a2a] text-lg">
+    </i>
+    <span class="font-normal">
+     cubercore-studios.vercel.app
+    </span>
+   </div>
+   <div class="absolute right-6 top-1/2 -translate-y-1/2 text-[#b9a98f] text-3xl cursor-pointer select-none">
+    <i class="fas fa-ellipsis-v">
+    </i>
+   </div>
+  </header>
+  <!-- Small logo and hamburger below top bar -->
+  <div class="w-full max-w-lg flex items-center justify-start px-6 py-3 bg-[#0a0a0a] border-b border-[#2c2c2c]">
+   <img alt="Small CuberCore Studios logo, black background with a stylized C letter in dark purple" class="h-8 w-8 object-contain" height="32" src="https://storage.googleapis.com/a1aa/image/3ebc8253-46e0-4f92-e0fd-927006498dc3.jpg" width="32"/>
+   <button aria-label="Menu" class="ml-4 text-[#b9a98f] text-2xl focus:outline-none">
+    <i class="fas fa-bars">
+    </i>
+   </button>
+  </div>
+  <!-- Main content -->
+  <main class="flex flex-col items-center text-center px-10 pt-12 pb-28 max-w-lg w-full relative z-10" style="font-feature-settings: 'liga' 0">
+   <img alt="Galaxy GO black silhouette logo with purple background" class="mx-auto mb-6" height="60" src="https://storage.googleapis.com/a1aa/image/8ff023b8-1fcf-4d80-6512-fea778ed49dd.jpg" width="60"/>
+   <h1 class="text-[#b9a98f] font-semibold text-2xl mb-2">
+    Galaxy GO
+   </h1>
+   <p class="text-[#b9a98f] text-sm font-light max-w-[400px] mb-6 leading-tight">
+    A new Blockman GO Blocky Mods experience. Available for download on our Discord server.
+   </p>
+   <!-- Buttons -->
+   <div class="flex space-x-4 mb-10">
+    <a class="bg-[#1f1f1f] text-[#b9a98f] text-sm px-5 py-2 rounded flex items-center space-x-2 hover:bg-[#3a6a2a] transition-colors" href="https://discord.gg/T62wfM5F" rel="noopener noreferrer" role="button" target="_blank">
+     <i class="fas fa-download text-[#3a6a2a] text-base">
+     </i>
+     <span>
+      Download Discord
+     </span>
+    </a>
+    <button aria-label="More Mods" class="bg-[#1f1f1f] text-[#b9a98f] text-sm px-5 py-2 rounded flex items-center space-x-2 hover:bg-[#3a6a2a] transition-colors" onclick="toggleModsGUI()">
+     <i class="fas fa-th-large text-[#3a6a2a] text-base">
+     </i>
+     <span>
+      More Mods
+     </span>
+    </button>
+   </div>
+   <!-- Android Version Card with embedded YouTube video -->
+   <div class="bg-[#1f1f1f] rounded-md w-full max-w-lg p-8 flex flex-col items-center space-y-6" style="min-height: 320px">
+    <div aria-hidden="true" class="bg-[#3a6a2a] rounded-full w-14 h-14 flex items-center justify-center">
+     <i class="fas fa-video text-[#b9a98f] text-lg">
+     </i>
+    </div>
+    <h2 class="text-[#b9a98f] font-semibold text-lg">
+     Galaxy GO Version
+    </h2>
+    <p class="text-[#b9a98f] text-sm font-light mb-2">
+     Version 1.0.0
+    </p>
+    <div class="w-full text-left text-xs text-[#b9a98f] font-light max-w-[400px] mb-4">
+     <p>
+      <span class="font-semibold">
+       Status:
+      </span>
+      Available on Discord
+     </p>
+     <p>
+      <span class="font-semibold">
+       Download Link:
+      </span>
+      <a class="underline hover:text-[#3a6a2a]" href="https://discord.gg/T62wfM5F" rel="noopener noreferrer" target="_blank">
+       https://discord.gg/T62wfM5F
+      </a>
+     </p>
+    </div>
+    <div class="w-full aspect-video rounded overflow-hidden">
+     <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" src="https://www.youtube.com/embed/co5pveTI7tY?si=sNr9DOlRKUnof0Xw" title="YouTube video player">
+     </iframe>
+    </div>
+   </div>
+   <!-- More Information Button -->
+   <button aria-label="More Information" class="mt-8 bg-[#3a6a2a] hover:bg-[#2e5521] text-[#b9a98f] text-sm font-semibold px-6 py-3 rounded transition-colors" onclick="toggleInfo()">
+    More Information
+   </button>
+   <!-- More Information Section -->
+   <section class="hidden mt-8 bg-[#1f1f1f] rounded-md p-6 max-w-lg text-left text-[#b9a98f] text-base leading-relaxed" id="infoSection">
+    <h3 class="font-semibold mb-3 text-center text-[#b9a98f] text-xl">
+     About CuberCore Studios and Galaxy GO
+    </h3>
+    <p class="mb-3">
+     <strong>CuberCore Studios</strong> is a team dedicated to creating unique and innovative experiences for the Blockman GO community. Our focus is to bring high-quality mods that enhance gameplay and the game's aesthetics.
+    </p>
+    <p>
+     <strong>Galaxy GO</strong> is a new mod for Blockman GO that brings galaxy-inspired textures and visual elements, providing a completely new and immersive visual experience. With galaxy textures, the mod transforms the game environment, giving it a cosmic and futuristic touch.
+    </p>
+   </section>
+  </main>
+  <!-- Mods GUI Overlay -->
+  <div class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 items-center justify-center p-6" id="modsGUI" role="dialog" aria-modal="true" aria-labelledby="modsGUITitle">
+   <div class="bg-[#1f1f1f] rounded-lg max-w-lg w-full p-6 relative text-[#b9a98f]">
+    <h3 class="text-center text-xl font-semibold mb-4" id="modsGUITitle">
+     More Mods from CuberCore Studios
+    </h3>
+    <ul class="space-y-4 text-sm">
+     <li class="flex flex-col space-y-1">
+      <span class="font-semibold">Galaxy GO</span>
+      <a class="underline hover:text-[#3a6a2a]" href="https://discord.gg/T62wfM5F" rel="noopener noreferrer" target="_blank">
+       Download on Discord
+      </a>
+     </li>
+     <li class="flex flex-col space-y-1">
+      <span class="font-semibold">GamesGuardian - GG-CbR</span>
+      <a class="underline hover:text-[#3a6a2a]" href="https://download1503.mediafire.com/nhmv0tcxb5ngVKdv9j8xlnt8oM25IYZBdtpqcRIAInqk4fcco2dKm08ftLVM3_QyEU7tODEwLeXDqJvD6I056tZTMKSai5Gr4bu4d7gIb0d26q5z3FvUlw5sIxwPn064nr6lF0680bnC2eA6q76K01ghDdQob54sSOhhNpDxMYAz/b0io2mo2fyc1ye9/%EF%BF%BE%E5%90%80%E5%A4%80%E4%B4%80%E4%84%80%E4%B8%80%E4%88%80%E4%9C%80%E2%80%80%E4%9C%80%E4%9C%80_signed.apk" rel="noopener noreferrer" target="_blank">
+       Download APK
+      </a>
+     </li>
+    </ul>
+    <button aria-label="Close" class="absolute top-3 right-3 text-[#b9a98f] hover:text-[#3a6a2a] text-2xl focus:outline-none" onclick="toggleModsGUI()">
+     <i class="fas fa-times">
+     </i>
+    </button>
+   </div>
+  </div>
+  <!-- Background image with planets and stars -->
+  <img alt="Background image of a purple space scene with planets and stars" class="fixed inset-0 w-full h-full object-cover -z-10 pointer-events-none select-none" height="1200" src="https://storage.googleapis.com/a1aa/image/00fd91cb-37a9-4562-ad75-28dd00158343.jpg" width="600"/>
+ </body>
+</html>
